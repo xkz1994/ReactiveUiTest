@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUiTest", "ReactiveUiTest\ReactiveUiTest.csproj", "{979BA275-F6CD-44EA-886F-5A6591876D8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReactiveUiTest", "ReactiveUiTest\ReactiveUiTest.csproj", "{979BA275-F6CD-44EA-886F-5A6591876D8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

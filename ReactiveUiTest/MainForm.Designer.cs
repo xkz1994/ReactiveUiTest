@@ -28,51 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            splitContainer1 = new SplitContainer();
+            searchResultsListBox = new TableLayoutPanel();
             label1 = new Label();
             searchTextBox = new TextBox();
-            searchResultsListBox = new TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Name = "splitContainer1";
-            splitContainer1.Orientation = Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(searchTextBox);
-            splitContainer1.Panel1.Controls.Add(label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(searchResultsListBox);
-            splitContainer1.Size = new Size(800, 450);
-            splitContainer1.SplitterDistance = 44;
-            splitContainer1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(13, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 17);
-            label1.TabIndex = 0;
-            label1.Text = "Search From: ";
-            // 
-            // searchTextBox
-            // 
-            searchTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            searchTextBox.Location = new Point(107, 10);
-            searchTextBox.Name = "searchTextBox";
-            searchTextBox.Size = new Size(681, 23);
-            searchTextBox.TabIndex = 1;
             // 
             // searchResultsListBox
             // 
@@ -80,32 +43,74 @@
             searchResultsListBox.ColumnCount = 1;
             searchResultsListBox.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             searchResultsListBox.Dock = DockStyle.Fill;
-            searchResultsListBox.Location = new Point(0, 0);
+            searchResultsListBox.Location = new Point(3, 33);
             searchResultsListBox.Name = "searchResultsListBox";
-            searchResultsListBox.Size = new Size(800, 402);
+            searchResultsListBox.Size = new Size(794, 414);
             searchResultsListBox.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Dock = DockStyle.Left;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(88, 24);
+            label1.TabIndex = 0;
+            label1.Text = "Search From: ";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // searchTextBox
+            // 
+            searchTextBox.Dock = DockStyle.Fill;
+            searchTextBox.Location = new Point(88, 0);
+            searchTextBox.Name = "searchTextBox";
+            searchTextBox.Size = new Size(706, 23);
+            searchTextBox.TabIndex = 1;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Controls.Add(searchResultsListBox, 0, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(800, 450);
+            tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(searchTextBox);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(794, 24);
+            panel1.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(splitContainer1);
+            Controls.Add(tableLayoutPanel1);
             Name = "MainForm";
             Text = "MainForm";
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel1.PerformLayout();
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private SplitContainer splitContainer1;
+        private TableLayoutPanel searchResultsListBox;
         private Label label1;
         private TextBox searchTextBox;
-        private TableLayoutPanel searchResultsListBox;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
     }
 }

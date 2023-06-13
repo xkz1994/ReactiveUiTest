@@ -30,7 +30,7 @@ public class ListBoxItemConverter : IBindingTypeConverter
 
         var viewModelControlHosts =
             (from object? viewModel in enumerable
-             select new ViewModelControlHost { ViewModel = viewModel, Dock = DockStyle.Top })
+             select new ViewModelControlHost { ViewModel = viewModel, Dock = DockStyle.Top, Height = 100 })
             .ToList();
 
         result = viewModelControlHosts;
