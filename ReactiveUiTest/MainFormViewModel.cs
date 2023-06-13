@@ -8,7 +8,7 @@ namespace ReactiveUiTest;
 
 public class MainFormViewModel : ReactiveObject
 {
-    private string _searchTerm;
+    private string _searchTerm = "";
 
     public string SearchTerm
     {
@@ -16,8 +16,8 @@ public class MainFormViewModel : ReactiveObject
         set => this.RaiseAndSetIfChanged(ref _searchTerm, value);
     }
 
-    private readonly ObservableAsPropertyHelper<IEnumerable<NugetDetailsViewModel>> _searchResults;
-    public IEnumerable<NugetDetailsViewModel> SearchResults => _searchResults.Value;
+    private readonly ObservableAsPropertyHelper<IEnumerable<NugetDetailsViewModel>?> _searchResults;
+    public IEnumerable<NugetDetailsViewModel>? SearchResults => _searchResults.Value;
 
     private readonly ObservableAsPropertyHelper<bool> _isAvailable;
     public bool IsAvailable => _isAvailable.Value;
@@ -58,7 +58,7 @@ public class MainFormViewModel : ReactiveObject
     {
         _searchResults = this
             .WhenAnyValue(x => x.SearchTerm)
-            .Throttle(TimeSpan.FromMilliseconds(800))
+            .Throttle(TimeSpan.FromMilliseconds(800)) // 用于限制事件流的频率，以便在指定的时间间隔内只接收最新的事件。这对于处理高频率事件流或限制用户界面上的响应非常有用
             .Select(term => term?.Trim())
             .DistinctUntilChanged()
             .Where(term => string.IsNullOrWhiteSpace(term) == false)

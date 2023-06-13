@@ -76,15 +76,12 @@
             // 
             // searchResultsListBox
             // 
+            searchResultsListBox.AutoScroll = true;
             searchResultsListBox.ColumnCount = 1;
             searchResultsListBox.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            searchResultsListBox.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             searchResultsListBox.Dock = DockStyle.Fill;
             searchResultsListBox.Location = new Point(0, 0);
             searchResultsListBox.Name = "searchResultsListBox";
-            searchResultsListBox.RowCount = 1;
-            searchResultsListBox.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            searchResultsListBox.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             searchResultsListBox.Size = new Size(800, 402);
             searchResultsListBox.TabIndex = 0;
             // 

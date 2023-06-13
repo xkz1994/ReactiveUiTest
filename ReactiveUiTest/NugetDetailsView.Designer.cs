@@ -64,6 +64,7 @@
             iconImage.Location = new Point(0, 0);
             iconImage.Name = "iconImage";
             iconImage.Size = new Size(186, 464);
+            iconImage.SizeMode = PictureBoxSizeMode.AutoSize;
             iconImage.TabIndex = 0;
             iconImage.TabStop = false;
             // 
@@ -113,6 +114,7 @@
             Name = "NugetDetailsView";
             Size = new Size(559, 464);
             splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);

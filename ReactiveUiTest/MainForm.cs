@@ -16,6 +16,7 @@ public partial class MainForm : Form, IViewFor<MainFormViewModel>
     public MainForm()
     {
         InitializeComponent();
+
         ViewModel = new MainFormViewModel();
 
         this.WhenActivated(disposableRegistration =>
